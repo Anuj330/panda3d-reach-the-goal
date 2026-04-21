@@ -1,0 +1,3 @@
+.env_panda3d/
+__pycache__/
+*.pyc

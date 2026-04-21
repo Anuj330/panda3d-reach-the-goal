@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reach the Goal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  <body>
+    <main class="page">
+      <section class="panel intro">
+        <p class="eyebrow">Render-Friendly Web Game</p>
+        <h1>Reach the Goal</h1>
+        <p class="lead">
+          Move the panda marker across the field and touch the goal.
+          Use the arrow keys or W A S D. Press R to restart.
+        </p>
+        <div class="status-row">
+          <span id="status">Loading game state...</span>
+          <button id="restart-button" type="button">Restart</button>
+        </div>
+        <div class="hud">
+          <span id="position">Position: x=0.0, y=0.0</span>
+          <span id="distance">Distance to goal: --</span>
+        </div>
+      </section>
+
+      <section class="panel game-panel">
+        <canvas id="game-canvas" width="820" height="520" aria-label="Game board"></canvas>
+      </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+  </body>
+</html>
